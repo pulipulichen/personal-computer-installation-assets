@@ -1,0 +1,33 @@
+#!/bin/bash
+
+#sudo ln -s /etc/init.d/xselector /etc/rc2.d/S15xselector
+
+video_egpu(){
+  #rm /etc/X11/xorg.conf
+  cp /etc/X11/xorg.conf.nvidia /etc/X11/xorg.conf
+  #echo "ok" >> /tmp/1nvidia.txt
+  echo "video_epgu"
+}
+
+video_out(){
+  #rm /etc/X11/xorg.conf
+  #cp /etc/X11/xorg.conf.backup /etc/X11/xorg.conf
+  #echo "not ok" >> /tmp/2out-video.txt
+  echo "vidoe_normal"
+}
+
+if [ -f "/etc/X11/xorg.conf" ]; then
+  rm /etc/X11/xorg.conf
+  echo "remove xorg.conf"
+fi
+
+# If this is a work day
+if [[ $(lspci | grep NVIDIA) ]]; then
+  video_egpu
+  #video_out
+  echo video_egpu
+else
+  video_out
+  echo video_out
+fi
+
