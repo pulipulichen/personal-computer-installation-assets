@@ -1,0 +1,13 @@
+[Desktop Entry]
+Comment=
+Exec=node /home/pudding/Documents/app-scripts/nvidia-opener.js /home/pudding/Documents/app/Zotero_linux-x86_64/zotero
+Icon=/home/pudding/Documents/app/Zotero_linux-x86_64/chrome/icons/default/default256.png
+Name=Zotero
+NoDisplay=false
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=
